@@ -24,5 +24,6 @@ class IndexView(TemplateView):
 class Index(TemplateView):
     def get(self, request):
         return redirect(reverse('calc', kwargs={'A': 40, 'B': 2}))
+
         # reverse можно опустить, он будет вызван неявно
         # return redirect('calc', A=40, B=2)
