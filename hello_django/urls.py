@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from hello_django.views import IndexView
+from hello_django.views import IndexView, Index
+
 
 urlpatterns = [
-    path('', IndexView.as_view(), name='ind'),
-    path('calc/', include('hello_django.calc.urls')),
+    path('', Index.as_view(), name='ind'),
+    path('calc/', include('hello_django.calc.urls'), name="calc"),
     # path('admin/', admin.site.urls),
 ]

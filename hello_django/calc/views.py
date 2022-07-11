@@ -10,4 +10,4 @@ from django.views import View
 class CalcView(View):
 
     def get(self, request, *args, **kwargs):
-        return HttpResponse('calc')
+        return HttpResponse(f"{kwargs['A']} + {kwargs['B']} = {kwargs['A'] + kwargs['B']}")
