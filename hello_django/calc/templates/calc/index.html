@@ -1,3 +1,8 @@
 <h1>Калькулятор</h1>
 
 <p>{{ A }} + {{ B }} = {{ SUM }}</p>
+
+<h3>Last 10 results:</h3>
+{% for res in results %}
+    <span>{{ res.value }}</span> <br>
+{% endfor %}
