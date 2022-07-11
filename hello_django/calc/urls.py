@@ -1,6 +1,6 @@
 from django.urls import path
-from hello_django.calc import views
+from hello_django.calc.views import CalcView
 
 urlpatterns = [
-    path('', views.index, name='cal'),
+    path('', CalcView.as_view(), name='cal'),
 ]
